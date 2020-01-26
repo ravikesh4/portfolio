@@ -17,11 +17,11 @@ try {
 
 console.log(window.location.pathname);
 try {
-    var as = document.querySelectorAll(".uk-panel a");
+    var as = document.querySelectorAll("a");
     for (var i = 0; i < as.length; i++) {
         var link = as[i].getAttribute("href");
-        if ("/"+link === window.location.pathname) {
-            as[i].parentElement.classList.add("uk-active");
+        if ("#"+link === window.location.pathname) {
+            as[i].classList.add("pt-active");
         }
 
     }

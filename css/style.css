@@ -1,11 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,500,700,900&display=swap');
+
+@font-face{
+    src: url("../font/AvenirNext-Regular.ttf");
+    font-family: 'Avenir Next';
+}
+@font-face{
+    src: url("../font/AvenirNext-Bold.ttf");
+    font-family: 'Avenir Next';
+    font-weight: 800;
+}
+@font-face{
+    src: url("../font/AvenirNext-Italic.ttf");
+    font-family: 'Avenir Next';
+    font-style: italic;
+}
+
+* {
+    font-family: 'Avenir Next', serif !important;
+}
+
 html, body {
     scroll-behavior: smooth;
 }
 
-* {
-    font-family: 'Heebo', sans-serif;
-}
 
 :root {
     --main-color: rgb(217, 131, 46);
@@ -68,7 +84,7 @@ body {
 .portfolio .content {
     width: calc(100% - 140px);
     margin-left: 140px;
-    padding: 4%;
+    /* padding: 4%; */
 }
 
 /* mobile responsive navbar css  */
