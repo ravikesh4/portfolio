@@ -66,10 +66,12 @@ body {
     color: var(--nav-text);
     color: var(--text-color);
     font-weight: 700;
+    text-decoration: none;
 }
 .portfolio .navbar .navbar-link:hover {
     color: var(--nav-text);
     background-color:  var(--hover-color);
+    text-decoration: none;
 }
 
 .portfolio .navbar .pt-active {
