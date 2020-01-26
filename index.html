@@ -1,82 +1,392 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Hello World</title>
-  <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="images/hello-icon-152.png">
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="white"/>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Hello World">
-  <meta name="msapplication-TileImage" content="images/hello-icon-144.png">
-  <meta name="msapplication-TileColor" content="#FFFFFF">
-</head>
-<body class="fullscreen">
-  <!-- nav section start  -->
-  <section class="portfolio">
-    <div class="navbar">
-        <header>
-            <h5 class="name uk-margin-remove">Ravikesh</h5>
-            <a href="#"><div class="navbar-link">
-                    <img src="icon/home.svg" alt="Home" width="30px" height="30px">
-                    <p class="uk-margin-remove">Home</p>
-            </div></a>
-            <a href="#"><div class="navbar-link pt-active">
-                    <img src="icon/about.svg" alt="about" width="30px" height="30px">
-                    <p class="uk-margin-remove">About Me</p>
-            </div></a>
-            <a href="#"><div class="navbar-link">
-                    <img src="icon/services.svg" alt="services" width="30px" height="30px">
-                    <p class="uk-margin-remove">Services</p>
-            </div></a>
-            <a href="#"><div class="navbar-link">
-                    <img src="icon/portfolio.svg" alt="portfolio" width="30px" height="30px">
-                    <p class="uk-margin-remove">Portfolio</p>
-            </div></a>
-            <a href="#"><div class="navbar-link">
-                    <img src="icon/blog.svg" alt="Blog" width="30px" height="30px">
-                    <p class="uk-margin-remove">Blog</p>
-            </div></a>
-            <a href="#"><div class="navbar-link">
-                    <img src="icon/contact.svg" alt="contact" width="30px" height="30px">
-                    <p class="uk-margin-remove">Contact</p></div>
-            </a>
-        </header>
-    </div>
-    <div class="mob-nav">
-        <!-- <h5 class="name uk-margin-remove">Ravikesh</h5> -->
-        
-        <ul>
-            <a href="#" class="navbar-link  pt-active">
-                <li><img src="icon/home.svg" alt="Home" width="30px" height="30px">HOME</li>
-            </a>
-            <a href="#" class="navbar-link">
-                <li><img src="icon/about.svg" alt="about" width="30px" height="30px">ABOUT</li>
-            </a>
-            <a href="#" class="navbar-link">
-                <li><img src="icon/services.svg" alt="services" width="30px" height="30px">SERVICES</li>
-            </a>
-            <a href="#" class="navbar-link">
-                <li><img src="icon/portfolio.svg" alt="portfolio" width="30px" height="30px">PORTFOLIO</li>
-            </a>
-            <!-- <a href="#" class="navbar-link">
-                <li><img src="icon/blog.svg" alt="Blog" width="30px" height="30px">BLOG</li>
-            </a> -->
-            <a href="#" class="navbar-link">
-                <li><img src="icon/contact.svg" alt="contact" width="30px" height="30px">CONTACT</li>
-            </a>
-        </ul>
-    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Ravikesh-portfolio">
 
-    <div class="content">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatem quia molestiae. Eaque minima eligendi iste cum autem? Tempore porro ipsum deleniti illum voluptate soluta quidem saepe architecto omnis dolores.</p>
-    </div>
-</section>
-  <script src="js/main.js"></script>
+
+    <!-- <meta name="theme-color" content="#E5345B"> -->
+    <meta name="theme-color" content="#000">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Ravikesh-portfolio">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <link rel="apple-touch-icon" href="images/ravikesh.png" sizes="192x192">
+
+    <script type="text/javascript">
+
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('serviceworker.js').then(registration => {
+                console.log('pwa: ServiceWorker registration successful with scope: ', registration.scope);
+            }).catch(err => {
+                console.log('pwa: ServiceWorker registration failed: ', err);
+            });
+        }
+    </script>
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uikit.min.css">
+    <title>Ravikesh - Portfolio</title>
+</head>
+<body>
+    <!-- nav section start  -->
+    <section class="portfolio">
+        <div class="navbar">
+            <header>
+                <h5 class="name uk-margin-remove">Ravikesh</h5>
+                <a href="#home"><div class="navbar-link">
+                        <img src="icon/home.svg" alt="Home" width="30px" height="30px">
+                        <p class="uk-margin-remove">Home</p>
+                </div></a>
+                <a href="#about"><div class="navbar-link pt-active">
+                        <img src="icon/about.svg" alt="about" width="30px" height="30px">
+                        <p class="uk-margin-remove">About Me</p>
+                </div></a>
+                <a href="#services"><div class="navbar-link">
+                        <img src="icon/services.svg" alt="Skill" width="30px" height="30px">
+                        <p class="uk-margin-remove">Skill</p>
+                </div></a>
+                <a href="#projects"><div class="navbar-link">
+                        <img src="icon/portfolio.svg" alt="projects" width="30px" height="30px">
+                        <p class="uk-margin-remove">Projects</p>
+                </div></a>
+                <!-- <a href="#blog"><div class="navbar-link">
+                        <img src="icon/blog.svg" alt="Blog" width="30px" height="30px">
+                        <p class="uk-margin-remove">Blog</p>
+                </div></a> -->
+                <a href="#contact"><div class="navbar-link">
+                        <img src="icon/contact.svg" alt="contact" width="30px" height="30px">
+                        <p class="uk-margin-remove">Contact</p></div>
+                </a>
+            </header>
+        </div>
+        <div class="mob-nav">
+            <!-- <h5 class="name uk-margin-remove">Ravikesh</h5> -->
+            
+            <ul>
+                <a href="#home" class="navbar-link  pt-active">
+                    <li><img src="icon/home.svg" alt="Home" width="30px" height="30px">HOME</li>
+                </a>
+                <a href="#about" class="navbar-link">
+                    <li><img src="icon/about.svg" alt="about" width="30px" height="30px">ABOUT</li>
+                </a>
+                <a href="#services" class="navbar-link">
+                    <li><img src="icon/services.svg" alt="services" width="30px" height="30px">SKILL</li>
+                </a>
+                <a href="#portfolio" class="navbar-link">
+                    <li><img src="icon/portfolio.svg" alt="portfolio" width="30px" height="30px">PORTFOLIO</li>
+                </a>
+                <!-- <a href="#" class="navbar-link">
+                    <li><img src="icon/blog.svg" alt="Blog" width="30px" height="30px">BLOG</li>
+                </a> -->
+                <a href="#contact" class="navbar-link">
+                    <li><img src="icon/contact.svg" alt="contact" width="30px" height="30px">CONTACT</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="content ">
+
+            <!-- home section  -->
+
+            <section class="uk-background-muted">
+                <div class="uk-container " id="home">
+                <!-- <h2 class="uk-text-center">Ravikesh Yadav</h2> -->
+                <!-- <img src="images/ravikesh.png" alt=""> -->
+                    <div class="uk-child-width-1-2@s" uk-grid>
+                        <div>
+                            <div class="uk-margin-large-top">
+                                <p class="uk-text-bold uk-margin-remove">Hello there</p >
+                                <h1 class="uk-text-bold uk-margin-remove">Ravikesh Yadav</h1>
+                                <p class="uk-text-bold">I AM Web Developer</p>
+                                <p class="uk-text-muted">I Design beautiful web templates. I love to design website using HTML, CSS and JAVASCRIPT.</p>
+                                <div>
+                                    <button class="uk-button uk-button-primary"> MY WORK</button class="uk-button uk-button-primary">
+                                    <button class="uk-button uk-button-secondary">HIRE ME</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-text-center">
+                            <img src="images/user.png" alt="Ravikesh Portfolio user"  style="height: 90%;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- about section  -->
+            <section class="uk-container" id="about">
+                
+                    <div class="uk-margin-top">
+                        <h1 class="uk-text-uppercase uk-text-bold">ABOUT ME</h1>
+                        <p class="uk-text-muted uk-text-uppercase">Web Developer based in Bangalore,India</p>
+                    </div>
+                    <div class="uk-child-width-1-2@s" uk-grid>
+                        <div class="uk-text-center">
+                            <img src="images/user.png" alt="ravikesh"  style="height: 70%;">
+                        </div>
+                        <div>
+                            <h1 class="uk-text-bold">I'M Ravikesh Yadav</h1>
+                            <p class="uk-text-uppercase">A Web Developer based in Bangalore, India.</p>
+
+                            <p>
+                                I design and develop responsive websites for all devices, good in creating stylish 
+                                website, modern websites, web services and onilne store websites. My passion is to design beautiful websites.
+                            </p>
+                            <p>Check out my portfolio</p>
+
+                            <div class="uk-child-width-1-2@s" uk-grid>
+                                <div>
+                                    <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Birthday |</label>
+                                        22nd Nov 1995</p>
+                                    </div>
+                                    <!-- <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Age |</label> 24 yr</p>
+                                    </div> -->
+                                    <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Residence |</label>
+                                        Bangalore, India</p>
+                                    </div>
+                                    <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Address |</label>
+                                        Uttar Pradesh, India</p>
+                                    </div>
+                                </div>
+                                <div class="uk-margin-remove ">
+                                    <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Email |</label>
+                                        Rky13027@gmail.com</p>
+                                    </div>
+                                    <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Phone |</label>
+                                        +91 74119 66489</p>
+                                    </div>
+                                    <!-- <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Instagram |</label>
+                                        ravikeshyadav</p>
+                                    </div> -->
+                                    <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Freelancer |</label>
+                                        Available</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <a href="resume/Ravikesh_resume.pdf" class="uk-button uk-button-secondary">DOWNLOAD CV</a>
+                        </div>
+                    </div>
+            </section>
+
+             <!-- skill section  -->
+             <section class="uk-container" id="services">
+                
+                <div class="uk-margin-top">
+                    <h1 class="uk-text-uppercase uk-text-bold">My Skill</h1>
+                    <p class="uk-text-muted uk-text-uppercase">Service that I can provide</p>
+                </div>
+                <div class="uk-child-width-1-2@s" uk-grid>
+                    <div class="uk-text-bold">
+                        <p class="uk-margin-remove">HTML5</p>
+                        <p class="uk-margin-remove">80 %</p>
+                        <progress id="js-progressbar" class="uk-progress progress-size" value="80" max="100"></progress>
+
+                        <p class="uk-margin-remove">CSS</p>
+                        <p class="uk-margin-remove">70 %</p>
+                        <progress id="js-progressbar" class="uk-progress progress-size" value="70" max="100"></progress>
+
+                        <p class="uk-margin-remove">JAVASCRIPT</p>
+                        <p class="uk-margin-remove">60 %</p>
+                        <progress id="js-progressbar" class="uk-progress progress-size" value="60" max="100"></progress>
+
+                        <p class="uk-margin-remove">WORDPRESS</p>
+                        <p class="uk-margin-remove">40 %</p>
+                        <progress id="js-progressbar" class="uk-progress progress-size" value="40" max="100"></progress>
+                    </div>
+                    <div>
+                        <h1 class="uk-text-bold">Projects</h1>
+                        <div class="uk-child-width-1-2@s" uk-grid>
+                            <div>
+                                <div class="project-skill">
+                                    <table>
+                                        <tr>
+                                            <td><img class="table-img" src="icon/home.svg" alt=""></td>
+                                            <td style="padding-left: 5px;">More then 10 websites developed</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- <div class="project-skill">
+                                    <table>
+                                        <tr>
+                                            <td><img class="table-img" src="icon/home.svg" alt=""></td>
+                                            <td style="padding-left: 5px;">More then 10 websites developed</td>
+                                        </tr>
+                                    </table>
+                                </div> -->
+                            </div>
+
+                            <div>
+                                <!-- <div class="project-skill">
+                                    <table>
+                                        <tr>
+                                            <td><img class="table-img" src="icon/services.svg" alt=""></td>
+                                            <td style="padding-left: 5px;">More then 10 websites developed</td>
+                                        </tr>
+                                    </table>
+                                </div> -->
+                                <div class="project-skill">
+                                    <table>
+                                        <tr>
+                                            <td><img class="table-img" src="icon/blog.svg" alt=""></td>
+                                            <td style="padding-left: 5px;">2 backend websites developed</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- about section  -->
+        <section class="uk-container" id="projects">
+                
+            <div class="uk-margin-top">
+                <h1 class="uk-text-uppercase uk-text-bold">My Projects</h1>
+                <p class="uk-text-muted uk-text-uppercase">Web Developer based in Bangalore,India</p>
+            </div>
+            <div class="uk-child-width-1-2@s" uk-grid>
+                <div class="uk-text-center">
+                    <img src="images/user.png" alt="ravikesh"  style="height: 70%;">
+                </div>
+                <div>
+                    <h1 class="uk-text-bold">I'M Ravikesh Yadav</h1>
+                    <p class="uk-text-uppercase">A Web Developer based in Bangalore, India.</p>
+
+                    <p>
+                        I design and develop responsive websites for all devices, good in creating stylish 
+                        website, modern websites, web services and onilne store websites. My passion is to design beautiful websites.
+                    </p>
+                    <p>Check out my portfolio</p>
+
+                    <div class="uk-child-width-1-2@s" uk-grid>
+                        <div>
+                            <div class="about-detail">
+                                <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Birthday |</label>
+                                22nd Nov 1995</p>
+                            </div>
+                            <!-- <div class="about-detail">
+                                <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Age |</label> 24 yr</p>
+                            </div> -->
+                            <div class="about-detail">
+                                <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Residence |</label>
+                                Bangalore, India</p>
+                            </div>
+                            <div class="about-detail">
+                                <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Address |</label>
+                                Uttar Pradesh, India</p>
+                            </div>
+                        </div>
+                        <div class="uk-margin-remove ">
+                            <div class="about-detail">
+                                <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Email |</label>
+                                Rky13027@gmail.com</p>
+                            </div>
+                            <div class="about-detail">
+                                <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Phone |</label>
+                                +91 74119 66489</p>
+                            </div>
+                            <!-- <div class="about-detail">
+                                <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Instagram |</label>
+                                ravikeshyadav</p>
+                            </div> -->
+                            <div class="about-detail">
+                                <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Freelancer |</label>
+                                Available</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="resume/Ravikesh_resume.pdf" class="uk-button uk-button-secondary">DOWNLOAD CV</a>
+                </div>
+            </div>
+    </section>
+
+            <!-- about section  -->
+            <section class="uk-container" id="contact">
+                
+                    <div class="uk-margin-top">
+                        <h1 class="uk-text-uppercase uk-text-bold">Get In Touch</h1>
+                        <p class="uk-text-muted uk-text-uppercase">Web Developer based in Bangalore,India</p>
+                    </div>
+                    <div class="uk-child-width-1-2@s" uk-grid>
+                        <div class="uk-text-center">
+                            <img src="images/user.png" alt="ravikesh"  style="height: 70%;">
+                        </div>
+                        <div>
+                            <h1 class="uk-text-bold">I'M Ravikesh Yadav</h1>
+                            <p class="uk-text-uppercase">A Web Developer based in Bangalore, India.</p>
+
+                            <p>
+                                I design and develop responsive websites for all devices, good in creating stylish 
+                                website, modern websites, web services and onilne store websites. My passion is to design beautiful websites.
+                            </p>
+                            <p>Check out my portfolio</p>
+
+                            <div class="uk-child-width-1-2@s" uk-grid>
+                                <div>
+                                    <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Birthday |</label>
+                                        22nd Nov 1995</p>
+                                    </div>
+                                    <!-- <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Age |</label> 24 yr</p>
+                                    </div> -->
+                                    <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Residence |</label>
+                                        Bangalore, India</p>
+                                    </div>
+                                    <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Address |</label>
+                                        Uttar Pradesh, India</p>
+                                    </div>
+                                </div>
+                                <div class="uk-margin-remove ">
+                                    <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Email |</label>
+                                        Rky13027@gmail.com</p>
+                                    </div>
+                                    <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Phone |</label>
+                                        +91 74119 66489</p>
+                                    </div>
+                                    <!-- <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Instagram |</label>
+                                        ravikeshyadav</p>
+                                    </div> -->
+                                    <div class="about-detail">
+                                        <p class="uk-margin-remove"><label class="uk-text-bold" for="Birthday">Freelancer |</label>
+                                        Available</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <a href="resume/Ravikesh_resume.pdf" class="uk-button uk-button-secondary">DOWNLOAD CV</a>
+                        </div>
+                    </div>
+            </section>
+        </div>
+    </section>
+
+
+    <div class="uk-padding-large"></div>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
 </body>
 </html>
