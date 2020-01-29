@@ -1,5 +1,5 @@
 console.log(caches.keys());
-let staticCacheName = "borok-cache";
+let staticCacheName = "ravikesh-cache";
 let filesToCache = [
     '/index.html/',
     '/images/ravikesh.png',
@@ -27,7 +27,7 @@ self.addEventListener('activate', event => {
         caches.keys().then(cacheNames => {
             return Promise.all(
                 cacheNames
-                    .filter(cacheName => (cacheName === "portfolio-cache"))
+                    .filter(cacheName => (cacheName === "ravikesh-cache"))
                     .filter(cacheName => (cacheName !== staticCacheName))
                     .map(cacheName => caches.delete(cacheName))
             );
