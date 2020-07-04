@@ -2,5 +2,211 @@
 
 * {
     font-family: 'Rubik', sans-serif !important;
+    line-height: 1.4;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.odd {
+    background-color: rgb(34, 34, 34);
+    color: #fff;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.pt20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container {
+    max-width: 1140px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.line {
+    border-left: 3px solid cyan;
+    width: 3px;
+    padding-left: 3px;
+}
+
+.w600 {
+    font-weight: 600;
+}
+
+.navbar {
+    position: relative;
+    background-color: black;
+}
+
+.ravi-logo h3 {
+    padding-top: 15px;
+    color: #fff;
+}
+
+.ravi-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ravi-nav .ravi-list ul {
+    display: flex;
+    list-style: none;
+}
+
+.ravi-nav .ravi-list ul li {
+    color: #fff;
+    padding: 15px;
+    font-style: bold;
+    font-weight: 600;
+}
+
+.ravi-header {
+    background-color: black;
+}
+
+.ravi-inline {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.ravi-inline img {
+    height: 100%;
+    max-height: 85vh;
+
+}
+
+.ravi-inline .text {
+    min-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: auto 0;
+}
+
+.ravi-inline .text h2 {
+    font-weight: 600;
+    /* color: rgb(19, 139, 209); */
+    color: white;
+    font-size: 3.5vw;
+}
+
+.header-image {
+    max-height: 600px;
+    width: 100vw;
+    background: black;
+    overflow: hidden;
+}
+
+.header-image img {
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.text .ravi-secondary {
+    text-decoration: none;
+    border: 1px solid cyan;
+    padding: 8px 20px;
+    color: cyan;
+    font-weight: 600;
+    border-radius: 5px;
+
+}
+
+.text .ravi-primary {
+    text-decoration: none;
+    border: 1px solid cyan;
+    padding: 8px 20px;
+    background-color: cyan;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+ 
+/* about section */
+.about {
+    display: flex;
+}
+
+.about .about-image {
+    flex: 1;
+}
+
+.about .about-image img {
+    max-width: 250px;
+}
+
+.about .about-text {
+    flex: 2;
+}
+
+.about .about-text .about-para {
+    font-size: 18px;
+}
+
+.about-skill {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.about-skill div .progress {
+    outline: none;
+    border: none;
+    width: 90%;
+    padding: 0px;
+    background-color: rgb(233, 233, 233);
+    height: 8px;
+    border-radius: 2px;
+}
+
+progress::-moz-progress-bar { background: cyan; }
+progress::-webkit-progress-value { background: cyan; }
+progress { color: cyan; }
+
+.about-skill .bar {
+    margin: 10px 0px;
+}
+
+
+.about-skill .bar .skill {
+    display: flex;
+    width: 90%;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+}
+
+.services .service {
+    border: 1px solid cyan;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 90%;
+    padding: 10px;
+}
+.services .service:hover {
+    background-color: rgb(53, 235, 235);
+}
+
+@media screen and (max-width: 568px) {}
