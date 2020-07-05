@@ -3,6 +3,7 @@
 * {
     font-family: 'Rubik', sans-serif !important;
     line-height: 1.4;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,9 +12,14 @@ body {
     overflow-x: hidden;
 }
 
+
 .odd {
     background-color: rgb(34, 34, 34);
     color: #fff;
+}
+
+.even {
+    background-color: rgb(236, 236, 236);
 }
 
 a {
@@ -48,7 +54,10 @@ a {
 }
 
 .navbar {
-    position: relative;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
     background-color: black;
 }
 
@@ -171,7 +180,7 @@ a {
     border: none;
     width: 90%;
     padding: 0px;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(255, 255, 255);
     height: 8px;
     border-radius: 2px;
 }
@@ -207,6 +216,77 @@ progress { color: cyan; }
 }
 .services .service:hover {
     background-color: rgb(53, 235, 235);
+}
+
+.educations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.educations .education {
+    display: flex;
+    margin: 10px;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.educations .education .dot {
+    width: 20px;
+    height: 7px;
+    padding: 3px;
+    background-color: cyan;
+    border-radius: 50%;
+    margin-top: 24px;
+}
+
+.educations .education .education-card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.works {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.work {
+    margin: 10px;
+}
+
+.work-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 10vh;
+    border-radius: 10px;
+    top: 50%;
+    overflow: auto;
+    left: 50%;
+    width: 90vw;
+    height: 85vh;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: black;
+}
+
+.contact {
+    text-align: center;
+}
+
+.footer {
+    padding: 10px 5px;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer a:hover {
+    color: rgb(214, 214, 214);
 }
 
 @media screen and (max-width: 568px) {}

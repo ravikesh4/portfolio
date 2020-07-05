@@ -27,3 +27,18 @@ document.addEventListener('DOMContentLoaded',function(event){
     }
     StartTextAnimation(0);
   });
+
+var modal = document.getElementById("work-modal")
+var btn = document.getElementById("open-work")
+var span = document.getElementById("close");
+// var body = document.getElementById("body")
+
+btn.onclick = function() {
+  modal.style.display = "block"
+  // body.style.overflow = "hidden"
+}
+
+span.onclick = function() {
+  modal.style.display = "none"
+}
+
