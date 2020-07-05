@@ -53,6 +53,10 @@ a {
     font-weight: 600;
 }
 
+.toggle-button {
+    display: none;
+}
+
 .navbar {
     position: sticky;
     top: 0;
@@ -212,6 +216,7 @@ progress { color: cyan; }
     border-radius: 10px;
     cursor: pointer;
     width: 90%;
+    margin: 10px;
     padding: 10px;
 }
 .services .service:hover {
@@ -289,4 +294,44 @@ progress { color: cyan; }
     color: rgb(214, 214, 214);
 }
 
-@media screen and (max-width: 568px) {}
+/* .ravi-sidebar {
+    display: none;
+} */
+
+@media screen and (max-width: 640px) {
+    .about, .services, .works, .educations {
+        display: block;
+    }
+
+    .toggle-button {
+        display: block;
+        left: 105%;
+        top: 15px;    
+    }
+
+    /* .ravi-list {
+        display: none;
+    }
+
+    .toggle-button span {
+        display: block;
+        background-color: rgb(255, 255, 255);
+        width: 30px;
+        height: 5px;
+        margin: 3px;
+    }
+
+
+    .ravi-sidebar {
+        position: fixed;
+        width: 60vw;
+        height: 100%;
+        background-color: black;
+        color: #fff;
+        left: -60vw;
+    }
+
+    .active {
+        left: 0;
+    } */
+}

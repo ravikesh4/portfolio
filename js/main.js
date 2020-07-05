@@ -42,3 +42,9 @@ span.onclick = function() {
   modal.style.display = "none"
 }
 
+
+
+// function toggleMenu() {
+//   document.getElementById("sidebar").classList.toggle("active")
+//   document.getElementsByClassName("ravi-sidebar").style.display = "block"
+// }
