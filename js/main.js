@@ -48,3 +48,18 @@ span.onclick = function() {
 //   document.getElementById("sidebar").classList.toggle("active")
 //   document.getElementsByClassName("ravi-sidebar").style.display = "block"
 // }
+
+// var sidebar = document.getElementById("sidebar");
+// sidebar.onclick = function()
+var ravisidenav = document.getElementById("ravisidenav")
+function openNav() {
+  document.getElementById("ravisidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("ravisidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+window.onclick = () => closeNav()

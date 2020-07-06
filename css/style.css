@@ -294,9 +294,18 @@ progress { color: cyan; }
     color: rgb(214, 214, 214);
 }
 
-/* .ravi-sidebar {
+.ravi-sidebar {
     display: none;
-} */
+    padding-top: 10vh;
+}
+
+.ravi-sidebar ul li, a {
+    padding: 5px;
+    list-style: none;
+    color: #fff;
+    font-weight: 600;
+
+}
 
 @media screen and (max-width: 640px) {
     .about, .services, .works, .educations {
@@ -309,10 +318,17 @@ progress { color: cyan; }
         top: 15px;    
     }
 
-    /* .ravi-list {
+    .ravi-list {
         display: none;
     }
 
+    .toggle-button {
+        margin-top: 15px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+    }
+     
     .toggle-button span {
         display: block;
         background-color: rgb(255, 255, 255);
@@ -321,17 +337,30 @@ progress { color: cyan; }
         margin: 3px;
     }
 
-
     .ravi-sidebar {
-        position: fixed;
-        width: 60vw;
+        display: block;
         height: 100%;
-        background-color: black;
-        color: #fff;
-        left: -60vw;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
     }
 
-    .active {
-        left: 0;
-    } */
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      
+      #main {
+        transition: margin-left .5s;
+
+      }
+
 }
