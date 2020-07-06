@@ -9,10 +9,12 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+
 }
 
-
+#main {
+    overflow-x: hidden;
+}
 .odd {
     background-color: rgb(34, 34, 34);
     color: #fff;
