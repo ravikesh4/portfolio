@@ -127,6 +127,7 @@ nav {
     list-style-type: none;
     font-size: 1.25rem;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .profile-links ul li a {
@@ -286,19 +287,81 @@ nav {
 }
 
 
+/* education details  */
+.education-card {
+    background-color: #0d3bd1;
+    padding: 20px;
+    margin: 20px 0px;
+    border-radius: 10px;
+}
+
+.education-card p {
+    color: rgb(238, 238, 238);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.education-card p span i {
+    color: rgb(238, 238, 238);
+    font-size: 18px;
+    float: right;
+}
 
 
+.education-card h5 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.education-card h6 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
 
 
+/* profile css  */
 
+.profile-header {
+    display: flex;
+    max-width: 100%;
+}
 
+.profile-header .image {
+    flex: 1;
+}
+
+.profile-header .image img {
+    width: 100px;
+    border-radius: 50%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.profile-header .details {
+    /* flex: 1; */
+}
+
+.profile-header .details h6 {
+    color: black;
+}
+
+.profile-header .details h6 i {
+    color: #0d3bd1;
+}
+
+.profile-header .details h6 a {
+    text-decoration: none;
+    color: black;
+}
 
 
 /* footer starts  */
 
 .footer-space {
     height: 58px;
-    background-color: white;
+    /* background-color: white; */
 }
 
 footer {
@@ -307,6 +370,8 @@ footer {
     bottom: 0;
     left: 0;
     height: 58px;
+    border-radius: 10px 10px 0px 0px;
+
     right: 0;
     background-color: rgb(255, 255, 255);
     z-index: 1;
@@ -351,6 +416,7 @@ footer {
 .footer-links li a span i {
     font-size: 25px;
     font-weight: 700;
+    color: #100DD1;
 }
 
 .active {
@@ -367,7 +433,44 @@ footer {
 }
 
 
+/* show contact  */
+.show-contact {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px 10px 0px 0px;
+    padding: 30px 10px  50px 10px;
+    transition: all 500ms;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    bottom: 0;
+}
 
+.visible-contact {
+    transform: translateY(100%);
+}
+
+.show-contact form div label {
+    font-size: 15px;
+    color: #0d3bd1;
+}
+
+.show-contact form div input,.show-contact form div textarea {
+    border: 1px solid #0d3bd1;
+    outline: none;
+}
+
+.show-contact form div input:active,.show-contact form div textarea:active, .show-contact form div input:focus,.show-contact form div textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.show-contact form div input::placeholder, .show-contact form div textarea::placeholder {
+    color: #0d3bd1;
+}
+
+.show-contact form button {
+    background-color: #0d3bd1;
+}
 
 /* bootstrap customized css  */
 

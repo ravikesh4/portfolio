@@ -12,8 +12,17 @@ const assets = [
   "/images/header.jpg",
   "/images/netzary.png",
   "/images/hurreh_logo.png",
-  "/images/evineon_logo.png"
-  
+  "/images/evineon_logo.png",
+  "/mobile/css/style.css",
+  "/mobile/images/header/1.jpg",
+  "/mobile/images/header/2.jpg",
+  "/mobile/images/header/3.jpg",
+  "/mobile/images/projects/admin.png",
+  "/mobile/images/projects/ecommerce.png",
+  "/mobile/images/projects/instagram.png",
+  "/mobile/images/projects/mobile.png",
+  "/mobile/images/ravi.png",
+  "/mobile/images/ravikesh.jpg"
 ]
 
 self.addEventListener("install", installEvent => {
