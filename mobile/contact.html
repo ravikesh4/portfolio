@@ -153,6 +153,9 @@
 
         function showContact() {
             var showContact = document.getElementById('showContact')
+            showContact.addEventListener("click", function (event) {
+                event.preventDefault()
+            });
             if (showContact.classList.contains("visible-contact")) {
                 showContact.classList.remove("visible-contact");
             } else {
