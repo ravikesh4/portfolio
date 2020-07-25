@@ -36,7 +36,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="font/line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/addtohomescreen.css">
     <style>
         .mystyle {
             width: 100%;
@@ -335,6 +335,18 @@
         }
     </script>
 
+    <!-- homescreen  -->
+    <script>
+        if(
+            (("standalone" in window.navigator) && !window.navigator.standalone) 
+            || 
+            ( !window.matchMedia('(display-mode: standalone').matches)
+        ) {
+            addToHomeScreen();
+        }
+    </script>
+
+    <script src="js/addtohomescreen.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
